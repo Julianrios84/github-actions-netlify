@@ -25,3 +25,12 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
 
+    - name: Deploy to netlify
+      uses: nwtgck/actions-netlify@v1.1
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      with:
+        # publish-dir: dist/${{ env.PROJECT_NAME }}
+        publish-dir: dist/github-actions-netlify
+        # github-token: ${{ secrets.GITHUB_TOKEN }}

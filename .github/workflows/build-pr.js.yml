@@ -33,4 +33,4 @@ jobs:
       with:
         # publish-dir: dist/${{ env.PROJECT_NAME }}
         publish-dir: dist/github-actions-netlify
-        # github-token: ${{ secrets.GITHUB_TOKEN }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
